@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather-app</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <style>
+      *{
+        background-image: "https://images.pexels.com/photos/53594/blue-clouds-day-fluffy-53594.jpeg?cs=srgb&dl=pexels-pixabay-53594.jpg&fm=jpg";
+      }
+    </style>
+</head>
+<body>
+    <nav class="navbar bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand">Search For Weather</a>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="city">
+            <button class="btn btn-outline-success" type="submit" id="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+    <div class="container">
+
+        <h2 class="text-center my-3">Weather Of <span id="cityName"></span></h2>
+        <main class="my-4">
+            <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+              <div class="col">
+                <div class="card mb-4 rounded-3 shadow-sm">
+                  <div class="card-header py-3">
+                    <h4 class="my-0 fw-normal">Temperature</h4>
+                  </div>
+                  <div class="card-body">
+                    <h1 class="card-title pricing-card-title"><span id="temp"> </span><small class="text-muted fw-light">°C</small></h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                      <li>Min temperature - </li><span id="min_temp"></span>                      
+                      <li>Max temperature - </li><span id="max_temp"></span>                     
+                      <li>It feels like - </li><span id="feels_like"></span>                      
+                      
+                    </ul>
+                    
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card mb-4 rounded-3 shadow-sm">
+                  <div class="card-header py-3">
+                    <h4 class="my-0 fw-normal">More Info.</h4>
+                  </div>
+                  <div class="card-body">
+                    <h1 class="card-title pricing-card-title"><span id="humidity"></span><small class="text-muted fw-light"> g.m <sup>-3</sup></small></h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                      <li>Wind speed - </li><span id="wind_speed"></span>
+                      <li>Cloud PCT is - </li><span id="cloud_pct"></span>
+                      <li>Wind Degrees is - </li><span id="wind_degrees"></span>
+                      
+                    </ul>
+                    
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card mb-4 rounded-3 shadow-sm border-primary">
+                  <div class="card-header py-3 text-bg-primary border-primary">
+                    <h4 class="my-0 fw-normal">Sun Information</h4>
+                  </div>
+                  <div class="card-body">
+                    <h1 class="card-title pricing-card-title"><small class="text-muted fw-light">UNIX Timestamp</small></h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                      <li>Sunrise - </li><span id="sunrise"></span>
+                      <li>Sunset - </li><span id="sunset"></span>
+                      
+                      
+                    </ul>
+                   
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+           
+              </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+</html>
